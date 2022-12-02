@@ -1,0 +1,44 @@
+// Init Menu
+
+#start 
+                
+    .screen
+        animation: bgAni 30s linear infinite
+
+
+    h1
+        color: white
+        text-shadow: -3px 0 $blue, 0 3px $blue, 3px 0 $blue, 0 -3px $blue
+        filter: drop-shadow(0px 5px 10px rgba($blue,.9))
+
+        
+
+    img
+        transform: scaleX(-1)
+        width: 240px
+        image-rendering: pixelated
+        margin: 50px 0
+
+
+
+    button
+        border: none
+        box-shadow: 0px 5px 5px 5px rgba($blue,.5)
+        color: white
+        font-weight: bold
+        text-transform: uppercase
+        letter-spacing: 2px
+        border-radius: 8px
+        background: $blue
+        width: 70%
+        height: 40px
+        &:hover
+            background: darken($blue,5)
+
+    @keyframes bgAni
+        from
+            background-position: left top
+        to
+            background-position: right bottom
+
+

@@ -1,0 +1,70 @@
+$blue: #9bc0e9
+@import start
+@import game
+@import gameover
+
+
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+body
+    font-family: 'Inter', sans-serif
+    overflow: hidden
+    
+    
+.hide
+    display: none
+
+
+.screen
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    background-image: url(../img/bg.png)
+    background-position: center
+    background-size: 1600px
+
+
+.render
+    width: 90%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+
+@media screen and (min-width: 767px)
+    body
+        .render
+            width: 90%
+
+
+@media screen and (min-width: 768px)
+    body
+        .render
+            width: 65%
+
+        
+@media screen and (min-width: 1024px)
+    body
+        .render
+            width: 70%
+
+@media screen and (min-width: 1400px)
+    body
+        .render
+            width: 40%
+
+@media screen and (min-width: 1867px)
+    body
+        .render
+            width: 30%
+
+
+

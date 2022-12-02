@@ -1,0 +1,61 @@
+#gameover
+    
+    h1
+        text-transform: uppercase
+
+
+    .render
+        display: flex
+        gap: 64px
+        text-align: center
+
+
+    span
+        font-weight: bold
+
+    #star
+        color: gold
+        margin-top: 24px
+        animation: starAni 0.2s linear forwards
+        transition: 0.5s
+
+        &:hover
+            transform: scale(1.25)
+            
+
+
+    #stars
+        height: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 6px
+
+
+    @keyframes starAni 
+        0%
+            font-size: 25px
+            transform: rotate(120deg)
+            
+        50%
+            font-size: 60px
+
+        100%
+            font-size: 40px
+            filter: drop-shadow(0px 0px 10px rgba(gold,.5))
+
+    
+
+    button
+        border: none
+        box-shadow: 0px 5px 5px 5px rgba($blue,.5)
+        color: white
+        font-weight: bold
+        text-transform: uppercase
+        letter-spacing: 2px
+        border-radius: 8px
+        background: $blue
+        width: 70%
+        height: 40px
+        &:hover
+            background: darken($blue,5)

@@ -1,0 +1,68 @@
+#game
+    
+    #sun
+        z-index: 1
+        width: 500px
+        position: absolute
+        filter: drop-shadow(-20px 20px 50px rgba(255, 196, 0, 0.9))
+        
+
+
+    #snowman
+        transform: scaleX(-1)
+        position: relative
+        width: 240px
+        filter: drop-shadow(-10px -10px 10px rgba(0, 0, 0, 0.3))
+        image-rendering: pixelated
+        
+    
+
+    #word_letters,#options_letters
+        background: #333
+        padding: 8px
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        width: fit-content
+        border-radius: 8px
+        text-transform: uppercase
+        
+
+    #word_letters
+        gap: 6px
+        margin-bottom: 16px
+        span
+            width: 22px
+            height: 22px
+            font-size: 14px
+            font-weight: bold
+            border: 1px solid white
+            border-radius: 30%
+            
+
+    #options_letters
+        gap: 2px
+        button
+            width: 40px
+            height: 40px
+            text-transform: uppercase
+
+
+    span,button
+        
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid white
+        color: black
+        background: linear-gradient(to bottom,#fff,#ccc) 
+        
+
+
+    .right
+        background: #19ff81
+        border: none
+
+        
+    .wrong
+        opacity: 0.3

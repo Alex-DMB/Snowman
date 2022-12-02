@@ -1,0 +1,240 @@
+#start .screen {
+  -webkit-animation: bgAni 30s linear infinite;
+          animation: bgAni 30s linear infinite;
+}
+#start h1 {
+  color: white;
+  text-shadow: -3px 0 #9bc0e9, 0 3px #9bc0e9, 3px 0 #9bc0e9, 0 -3px #9bc0e9;
+  filter: drop-shadow(0px 5px 10px rgba(155, 192, 233, 0.9));
+}
+#start img {
+  transform: scaleX(-1);
+  width: 240px;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+  margin: 50px 0;
+}
+#start button {
+  border: none;
+  box-shadow: 0px 5px 5px 5px rgba(155, 192, 233, 0.5);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  background: #9bc0e9;
+  width: 70%;
+  height: 40px;
+}
+#start button:hover {
+  background: #86b3e4;
+}
+@-webkit-keyframes bgAni {
+  from {
+    background-position: left top;
+  }
+  to {
+    background-position: right bottom;
+  }
+}
+@keyframes bgAni {
+  from {
+    background-position: left top;
+  }
+  to {
+    background-position: right bottom;
+  }
+}
+
+#game #sun {
+  z-index: 1;
+  width: 500px;
+  position: absolute;
+  filter: drop-shadow(-20px 20px 50px rgba(255, 196, 0, 0.9));
+}
+#game #snowman {
+  transform: scaleX(-1);
+  position: relative;
+  width: 240px;
+  filter: drop-shadow(-10px -10px 10px rgba(0, 0, 0, 0.3));
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+}
+#game #word_letters, #game #options_letters {
+  background: #333;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+#game #word_letters {
+  gap: 6px;
+  margin-bottom: 16px;
+}
+#game #word_letters span {
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 30%;
+}
+#game #options_letters {
+  gap: 2px;
+}
+#game #options_letters button {
+  width: 40px;
+  height: 40px;
+  text-transform: uppercase;
+}
+#game span, #game button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  color: black;
+  background: linear-gradient(to bottom, #fff, #ccc);
+}
+#game .right {
+  background: #19ff81;
+  border: none;
+}
+#game .wrong {
+  opacity: 0.3;
+}
+
+#gameover h1 {
+  text-transform: uppercase;
+}
+#gameover .render {
+  display: flex;
+  gap: 64px;
+  text-align: center;
+}
+#gameover span {
+  font-weight: bold;
+}
+#gameover #star {
+  color: gold;
+  margin-top: 24px;
+  -webkit-animation: starAni 0.2s linear forwards;
+          animation: starAni 0.2s linear forwards;
+  transition: 0.5s;
+}
+#gameover #star:hover {
+  transform: scale(1.25);
+}
+#gameover #stars {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+@-webkit-keyframes starAni {
+  0% {
+    font-size: 25px;
+    transform: rotate(120deg);
+  }
+  50% {
+    font-size: 60px;
+  }
+  100% {
+    font-size: 40px;
+    filter: drop-shadow(0px 0px 10px rgba(255, 215, 0, 0.5));
+  }
+}
+@keyframes starAni {
+  0% {
+    font-size: 25px;
+    transform: rotate(120deg);
+  }
+  50% {
+    font-size: 60px;
+  }
+  100% {
+    font-size: 40px;
+    filter: drop-shadow(0px 0px 10px rgba(255, 215, 0, 0.5));
+  }
+}
+#gameover button {
+  border: none;
+  box-shadow: 0px 5px 5px 5px rgba(155, 192, 233, 0.5);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  background: #9bc0e9;
+  width: 70%;
+  height: 40px;
+}
+#gameover button:hover {
+  background: #86b3e4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/bg.png);
+  background-position: center;
+  background-size: 1600px;
+}
+
+.render {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 767px) {
+  body .render {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .render {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body .render {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  body .render {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1867px) {
+  body .render {
+    width: 30%;
+  }
+}/*# sourceMappingURL=main.css.map */

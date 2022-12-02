@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1e8d17388f.js" crossorigin="anonymous"></script>
+
+    <title>Snow Game</title>
+</head>
+<body>
+    
+    <div id="start">
+        <div class="screen">
+
+            <div class="render">
+                <h1>Snowman Game</h1>
+                <img src="img/snow0.png" alt="snowman">
+                <button onclick='initGame()'>Iniciar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="game">
+        <div class="screen">
+            <div class="render">
+                    <img id='sun' src="img/sun.png" alt="sun">
+                    <img id='snowman' src="img/snow0.png" alt="snowman">
+                <div id='word_letters'>
+                </div>
+
+
+                <div id="options_letters">
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="gameover">
+        <div class="screen">
+            <div class="render">
+                <h1>Fim de jogo</h1>
+                <div>
+                    <span>Pontuação:</span>
+                    <div id="stars"></div>
+                </div>
+                <button onclick='reload()'>Voltar ao ínicio</button>
+            </div>
+        </div>
+    </div>
+
+<script src="./scripts.js"></script>
+</body>
+</html>
