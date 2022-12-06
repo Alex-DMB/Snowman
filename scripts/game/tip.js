@@ -1,4 +1,4 @@
-import { word } from './variables.js'
+import { word } from '../variables.js'
 
 export default function(){
 

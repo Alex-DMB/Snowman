@@ -1,4 +1,4 @@
-import {chances} from './selectLetters.js'
+import {chances} from '../game/selectLetters.js'
 
 export default function(){
 

@@ -1,7 +1,7 @@
-import { word } from './variables.js'
+import { word } from '../variables.js'
 import sunFeedback from './sunFeedback.js'
 import snowmanFeedback from './snowmanFeedback.js'
-import { gameOver } from './screens/end.js'
+import { gameOver } from '../end/end.js'
 
 let position = 0
 export let chances = 5
@@ -44,13 +44,13 @@ export function selectLetter(letter){
     }
 
     if(chances === 0){
-        setTimeout(gameOver,2000)
+        setTimeout(gameOver,100)
 
 
     }
 
     if(hits===word.length){
-        setTimeout(gameOver,2000)
+        setTimeout(gameOver,100)
 
     }
 

@@ -1,9 +1,9 @@
-import { initScreen } from './screens/init.js'
-import { initGame } from './screens/game.js'
-import { gameOver } from './screens/end.js'
-import { reload } from './screens/reload.js'
+import { initScreen } from './init/init.js'
+import { initGame } from './game/game.js'
+import { gameOver } from './end/end.js'
+import { reload } from './end/reload.js'
 
-initScreen()
+initGame()
 
 
 

@@ -1,5 +1,5 @@
 import {start,game,gameover} from '../variables.js'
-import score from '../score.js'
+import score from './score.js'
 
 export function gameOver(){
     start.setAttribute('class','hide')
