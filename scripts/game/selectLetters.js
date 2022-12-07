@@ -2,10 +2,20 @@ import { word } from '../variables.js'
 import sunFeedback from './sunFeedback.js'
 import snowmanFeedback from './snowmanFeedback.js'
 import { gameOver } from '../end/end.js'
+import {tips} from './tip.js'
 
 let position = 0
 export let chances = 5
 let hits = 0
+import {rightLetter,wrongLetter} from '../audio.js'
+
+function rightLetterSound(){
+
+    if(tips === true){
+        rightLetter.play()
+    }
+
+}
 
 export function selectLetter(letter){
 
@@ -26,7 +36,11 @@ export function selectLetter(letter){
 
             hit = true
             hits++
+            rightLetterSound()
+
+
         }
+
         
   
     }
@@ -39,6 +53,7 @@ export function selectLetter(letter){
         chances--
         sunFeedback()
         snowmanFeedback()
+        wrongLetter.play()
 
         
     }
@@ -51,6 +66,7 @@ export function selectLetter(letter){
 
     if(hits===word.length){
         setTimeout(gameOver,100)
+        
 
     }
 
