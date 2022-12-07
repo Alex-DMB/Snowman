@@ -23,4 +23,8 @@ export default function(){
         tips = true
     }
 
+    if(word.length < 5){
+        tips = true
+    }
+
 }
